@@ -36,6 +36,7 @@ hr
 #tabs
 {
     text-align: center;
+    position: relative;
 }
 
 .tab
@@ -48,8 +49,12 @@ hr
     display: inline-block;
 }
 
-.tab:hover
+#slider
 {
-    padding-bottom: 7px;
-    border-bottom: 3px solid #ACE;
+    background-color: #69B;
+    width: 150px;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    display: none;
 }
