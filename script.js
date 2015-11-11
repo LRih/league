@@ -38,13 +38,13 @@ function windowResize(e)
 
 function getTabX(tab)
 {
-    return currentTab.position().left + pxToInt(currentTab.css('marginLeft'));
+    return tab.position().left + pxToInt(tab.css('marginLeft'));
 }
 function getTabY(tab)
 {
     var slider = $('#slider');
-    return currentTab.position().top + pxToInt(currentTab.css('paddingTop')) + pxToInt(currentTab.css('paddingBottom')) +
-        pxToInt(currentTab.css('height')) - pxToInt(slider.css('height'));
+    return tab.position().top + pxToInt(tab.css('paddingTop')) + pxToInt(tab.css('paddingBottom')) +
+        pxToInt(tab.css('height')) - pxToInt(slider.css('height'));
 }
 
 function pxToInt(px)
