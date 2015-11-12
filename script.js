@@ -18,6 +18,7 @@ function tabHover(e)
         slider.css('display', 'block');
         slider.css('left', getTabX(currentTab));
         slider.css('top', getTabY(currentTab));
+        // slider.css('width', getWidth(currentTab));
     }
     else
     {
@@ -38,13 +39,18 @@ function windowResize(e)
 
 function getTabX(tab)
 {
-    return tab.position().left + pxToInt(tab.css('marginLeft'));
+    var slider = $('#slider');
+    return tab.position().left + pxToInt(tab.css('marginLeft')) + (getWidth(tab) - slider.width()) / 2;
 }
 function getTabY(tab)
 {
     var slider = $('#slider');
     return tab.position().top + pxToInt(tab.css('paddingTop')) + pxToInt(tab.css('paddingBottom')) +
         pxToInt(tab.css('height')) - pxToInt(slider.css('height'));
+}
+function getWidth(tab)
+{
+    return tab.width() + pxToInt(tab.css('paddingLeft')) + pxToInt(tab.css('paddingRight'));
 }
 
 function pxToInt(px)
