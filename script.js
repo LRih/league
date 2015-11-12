@@ -18,7 +18,6 @@ function tabHover(e)
         slider.css('display', 'block');
         slider.css('left', getTabX(currentTab));
         slider.css('top', getTabY(currentTab));
-        // slider.css('width', getWidth(currentTab));
     }
     else
     {
