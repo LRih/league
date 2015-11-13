@@ -25,6 +25,11 @@ a:hover
     margin-top: 10px;
 }
 
+.mob
+{
+    display: none;
+}
+
 /* ============================================================================ NAVIGATION */
 #navbar
 {
@@ -91,6 +96,22 @@ a:hover
     /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
+#tabs-dropdown
+{
+    background-color: #1d1d1d;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+#tabs-dropdown > a
+{
+    color: #fff;
+    padding: 14px 30px;
+    display: block;
+}
+
 #slider
 {
     background-color: #69B;
@@ -150,8 +171,19 @@ a:hover
     opacity: 1;
 }
 
+/* ============================================================================ FOOTER */
+footer
+{
+    font-weight: 300;
+    color: #888;
+    border-top: 1px solid #ccc;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
 /* ============================================================================ BOOSTING */
-.rank-select
+.rank-select-container
 {
     background-color: #CFC;
     text-align: center;
@@ -162,7 +194,7 @@ a:hover
     display: inline-block;
 }
 
-.region-select
+.region-select-container
 {
     background-color: #CFC;
     text-align: center;

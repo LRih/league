@@ -7,6 +7,7 @@
         
         <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
         <script type='text/javascript' src='script/script.js'></script>
+        <script type='text/javascript' src='script/tabs-dropdown.js'></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
@@ -23,16 +24,27 @@
                     <img id='nav-logo' src='images/logo.png'>
                     <span id='nav-title'>League King</span>
                 </a>
-                <div id='tab-container'>
+                <div id='tab-container' class='no-mob'>
                     <a class='tab' href='index.html'>Home</a>
                     <a class='tab' href='boosting.html'>Boosting</a>
                     <a class='active tab' href='contact.html'>Contact</a>
                     <div id='slider'></div>
+                </div>
+                <img id='nav-menu' class='mob' src='images/menu.png' alt='Menu'>
+            </div>
+            <div class='mob'>
+                <div id='tabs-dropdown'>
+                    <a href='index.html'>Home</a>
+                    <a href='boosting.html'>Boosting</a>
+                    <a href='contact.html'>Contact</a>
                 </div>
             </div>
         </nav>
         <div id='content'>
             <div class='heading'>Contact</div>
         </div>
+        <footer>
+            Copyright notice
+        </footer>
     </body>
 </html>
