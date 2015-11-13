@@ -4,30 +4,46 @@
         <title>League King</title>
         <meta charset='UTF-8'/>
         <meta name='viewport' content='width=device-width' />
-        <link rel='stylesheet' type='text/css' href='style.css' />
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' />
+        
         <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
-        <script type='text/javascript' src='script.js'></script>
+        <script type='text/javascript' src='script/script.js'></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        
+        <link rel='stylesheet' type='text/css' href='css/style.css' />
+        <link rel='stylesheet' media='screen and (max-width: 680px)' type='text/css' href='css/style-mobile.css' />
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' />
     </head>
     <body>
-        <div id='tabs'>
-            <a class='tab' href='#'>Home</a>
-            <a class='tab' href='#'>Boosting</a>
-            <a class='tab' href='#'>Contact</a>
-            <div id='slider'></div>
-        </div>
+        <nav id='navbar'>
+            <div id='nav-container'>
+                <div id='nav-title-container'>
+                    <img id='nav-logo' src='images/logo.png'>
+                    <div id='nav-title'>League King</div>
+                </div>
+                <div id='tab-container'>
+                    <a class='active tab' href='index.html'>Home</a>
+                    <a class='tab' href='boosting.html'>Boosting</a>
+                    <a class='tab' href='contact.html'>Contact</a>
+                    <div id='slider'></div>
+                </div>
+            </div>
+        </nav>
         <div id='content'>
-            <div class='heading'>Hello World</div>
-            <div>
-                <br>
+            <div class='heading'>Home</div>
+            <div class='text'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nibh turpis. Proin ac felis sem. Donec posuere metus eu ornare vulputate. Proin accumsan sem nec convallis ultrices. Ut interdum tincidunt eros. Cras nec neque libero. Morbi non ullamcorper erat. Vestibulum sollicitudin lacinia dolor. Phasellus nibh libero, rhoncus id consequat eu, convallis in risus. Ut eu mi vulputate, scelerisque purus a, commodo risus. Etiam cursus tellus quis urna vulputate, ornare feugiat arcu sollicitudin. Suspendisse id urna eget dui porttitor vehicula. Nulla elementum luctus purus, vel aliquam nunc vestibulum et.
-                <br><br>
+            </div>
+            <div class='text'>
                 Phasellus porta ligula sed mi congue posuere. Aenean venenatis hendrerit nulla et rutrum. Nam sit amet lectus ipsum. Nunc condimentum sem orci, auctor ullamcorper velit eleifend ac. Morbi vitae lorem magna. Phasellus eget arcu sed diam bibendum vulputate vitae id nunc. Donec vitae commodo lectus, sed cursus velit. Fusce turpis elit, vehicula eget laoreet id, finibus et ante. Phasellus eu turpis magna. Mauris eget nisl sagittis, fringilla nisl ac, malesuada metus.
-                <br><br>
+            </div>
+            <div class='text'>
                 Quisque nibh mi, tempus in eros sed, malesuada scelerisque enim. Vivamus vitae turpis quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin vel consectetur lorem, id suscipit odio. Suspendisse potenti. Sed sit amet sapien est. Curabitur nec imperdiet ipsum.
-                <br><br>
+            </div>
+            <div class='text'>
                 Donec vel dolor ut lacus elementum elementum. Maecenas tellus turpis, dapibus sit amet lorem tempus, pellentesque ullamcorper turpis. Proin justo eros, pellentesque eget faucibus non, cursus at mauris. Sed in porta ligula, vestibulum ultrices lectus. Nam viverra lacinia lorem interdum bibendum. Sed dignissim augue malesuada, facilisis leo eu, venenatis nulla. Nunc dictum eros vitae nunc faucibus hendrerit. Vivamus tincidunt scelerisque nibh, sit amet cursus dui scelerisque eu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Nullam euismod placerat nulla, vitae consequat nulla vestibulum et. Vivamus tempor est sit amet neque interdum dapibus. Maecenas diam velit, finibus sed facilisis et, hendrerit vitae quam. Nunc eleifend nec neque eget interdum.
-                <br><br>
             </div>
             <div class='hover-button-container'>
                 <div class='hover-button'>
@@ -37,16 +53,19 @@
                 <div class='hover-button'>
                 </div>
             </div>
-            <div>
-                <br>
+            <div class='text'>
                 Sed ornare dui sed mi ultricies, ac imperdiet nisi elementum. Donec placerat lobortis eros nec ullamcorper. In tristique mattis efficitur. Quisque viverra, ligula nec dapibus sodales, magna leo feugiat risus, et ultrices urna massa at felis. Proin molestie purus eu arcu sagittis, et dapibus orci fringilla. Curabitur dapibus rutrum ante, at egestas magna luctus at. Aenean euismod aliquet ipsum porta posuere. Nulla ut sollicitudin nunc. Vestibulum faucibus ante eu tempus congue. Curabitur eu tristique odio. Vestibulum vitae neque ultrices, interdum diam quis, malesuada lectus. Etiam et quam ac lorem pulvinar suscipit eu ac dui. 
-                <br><br>
+            </div>
+            <div class='text'>
                 Phasellus porta ligula sed mi congue posuere. Aenean venenatis hendrerit nulla et rutrum. Nam sit amet lectus ipsum. Nunc condimentum sem orci, auctor ullamcorper velit eleifend ac. Morbi vitae lorem magna. Phasellus eget arcu sed diam bibendum vulputate vitae id nunc. Donec vitae commodo lectus, sed cursus velit. Fusce turpis elit, vehicula eget laoreet id, finibus et ante. Phasellus eu turpis magna. Mauris eget nisl sagittis, fringilla nisl ac, malesuada metus.
-                <br><br>
+            </div>
+            <div class='text'>
                 Quisque nibh mi, tempus in eros sed, malesuada scelerisque enim. Vivamus vitae turpis quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin vel consectetur lorem, id suscipit odio. Suspendisse potenti. Sed sit amet sapien est. Curabitur nec imperdiet ipsum.
-                <br><br>
+            </div>
+            <div class='text'>
                 Donec vel dolor ut lacus elementum elementum. Maecenas tellus turpis, dapibus sit amet lorem tempus, pellentesque ullamcorper turpis. Proin justo eros, pellentesque eget faucibus non, cursus at mauris. Sed in porta ligula, vestibulum ultrices lectus. Nam viverra lacinia lorem interdum bibendum. Sed dignissim augue malesuada, facilisis leo eu, venenatis nulla. Nunc dictum eros vitae nunc faucibus hendrerit. Vivamus tincidunt scelerisque nibh, sit amet cursus dui scelerisque eu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Nullam euismod placerat nulla, vitae consequat nulla vestibulum et. Vivamus tempor est sit amet neque interdum dapibus. Maecenas diam velit, finibus sed facilisis et, hendrerit vitae quam. Nunc eleifend nec neque eget interdum.
-                <br><br>
+            </div>
+            <div class='text'>
                 Sed ornare dui sed mi ultricies, ac imperdiet nisi elementum. Donec placerat lobortis eros nec ullamcorper. In tristique mattis efficitur. Quisque viverra, ligula nec dapibus sodales, magna leo feugiat risus, et ultrices urna massa at felis. Proin molestie purus eu arcu sagittis, et dapibus orci fringilla. Curabitur dapibus rutrum ante, at egestas magna luctus at. Aenean euismod aliquet ipsum porta posuere. Nulla ut sollicitudin nunc. Vestibulum faucibus ante eu tempus congue. Curabitur eu tristique odio. Vestibulum vitae neque ultrices, interdum diam quis, malesuada lectus. Etiam et quam ac lorem pulvinar suscipit eu ac dui. 
             </div>
         </div>

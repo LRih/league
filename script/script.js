@@ -3,6 +3,9 @@ var currentTab = null;
 
 $(function()
 {
+    currentTab = $('.active.tab');
+    updateSlider();
+    
     $('.tab').mouseenter(tabHover);
     $(window).resize(windowResize);
 });
@@ -29,11 +32,14 @@ function tabHover(e)
 function windowResize(e)
 {
     if (currentTab != null)
-    {
-        var slider = $('#slider');
-        slider.css('left', getTabX(currentTab));
-        slider.css('top', getTabY(currentTab));
-    }
+        updateSlider();
+}
+
+function updateSlider()
+{
+    var slider = $('#slider');
+    slider.css('left', getTabX(currentTab));
+    slider.css('top', getTabY(currentTab));
 }
 
 function getTabX(tab)
@@ -44,8 +50,7 @@ function getTabX(tab)
 function getTabY(tab)
 {
     var slider = $('#slider');
-    return tab.position().top + pxToInt(tab.css('paddingTop')) + pxToInt(tab.css('paddingBottom')) +
-        pxToInt(tab.css('height')) - pxToInt(slider.css('height'));
+    return tab.position().top + pxToInt(tab.css('height')) - pxToInt(slider.css('height'));
 }
 function getWidth(tab)
 {

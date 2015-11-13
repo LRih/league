@@ -1,0 +1,163 @@
+
+body
+{
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+
+/* ============================================================================ NAVIGATION */
+#navbar
+{
+    font-weight: 400;
+    background-color: #1d1d1d;
+    width: 100%;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#nav-container
+{
+    max-width: 960px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+#nav-title-container
+{
+    float: left;
+    display: table;
+}
+
+#nav-logo
+{
+    vertical-align: middle;
+    height: 43px;
+    margin-right: 10px;
+    display: table-cell;
+}
+
+#nav-title
+{
+    font-size: 20px;
+    color: #fff;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#tab-container
+{
+    float: right;
+}
+
+.tab
+{
+    font-size: 16px;
+    color: #fff;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.tab:hover
+{
+    color: #fff;
+}
+
+.tab.active
+{
+    /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+#slider
+{
+    background-color: #69B;
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* ============================================================================ CONTENT */
+#content
+{
+    max-width: 960px;
+    margin: 100px auto; /* margin for navbar */
+    padding: 0 10px;
+}
+
+.heading
+{
+    font-size: 24px;
+    font-weight: 400;
+    color: #636363;
+}
+
+.text
+{
+    font-size: 16px;
+    font-weight: 300;
+    color: #636363;
+    margin-top: 20px;
+}
+
+.hover-button-container
+{
+    background-image: url("../images/image1.jpg");
+    background-size: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 0;
+}
+
+.hover-button
+{
+    background-color: rgba(151, 151, 255, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+.hover-button:hover
+{
+    opacity: 1;
+}
+
+/* ============================================================================ BOOSTING */
+.rank-select
+{
+    background-color: #CFC;
+    text-align: center;
+    vertical-align: bottom;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.region-select
+{
+    background-color: #CFC;
+    text-align: center;
+    vertical-align: bottom;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    display: inline-block;
+}
