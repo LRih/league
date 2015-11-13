@@ -8,6 +8,16 @@ $(function()
     
     $('.tab').mouseenter(tabHover);
     $(window).resize(windowResize);
+
+    $(".dropdown-menu li a").click(function()
+    {
+        var btn = $(this).parents(".dropdown").find('.btn');
+        btn.html($(this).text() + ' <span class="caret"></span>');
+        btn.val($(this).data('value'));
+        
+        $(".dropdown-menu li").removeClass('active');
+        $(this).parent().addClass('active');
+    });
 });
 
 

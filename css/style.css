@@ -20,6 +20,11 @@ a:hover
     text-decoration: none;
 }
 
+.margin-top
+{
+    margin-top: 10px;
+}
+
 /* ============================================================================ NAVIGATION */
 #navbar
 {
@@ -166,4 +171,9 @@ a:hover
     height: 400px;
     padding: 10px;
     display: inline-block;
+}
+
+.dropdown-menu
+{
+    width: 100%;
 }
