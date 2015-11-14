@@ -18,7 +18,7 @@
                     if ($tab === '<div>')
                         echo '<span class=\'tab-divider\'></span>';
                     else
-                        echo '<a class=\''.($active ? 'active ' : '').'tab\' href=\''.$link.'.php\'>'.$tab.'</a>';
+                        echo '<a class=\''.($active ? 'active ' : '').'tab\' href=\'' . $link . '.php\'>' . $tab . '</a>';
                 }
             ?>
             <div id='slider'></div>
@@ -38,7 +38,7 @@
                     $active = ($GLOBALS['activeTab'] === $tab);
 
                     if ($tab !== '<div>')
-                        echo '<a class=\''.($active ? 'active' : '').'\' href=\''.$link.'.php\'>'.$tab.'</a>';
+                        echo '<a class=\''.($active ? 'active' : '').'\' href=\'' . $link . '.php\'>' . $tab . '</a>';
                 }
             ?>
         </div>
