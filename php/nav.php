@@ -1,6 +1,6 @@
 <nav id='navbar'>
     <div id='nav-container'>
-        <a id='nav-title-container' href='index.html'>
+        <a id='nav-title-container' href='index.php'>
             <img id='nav-logo' src='images/logo.png'>
             <span id='nav-title'>League King</span>
         </a>
