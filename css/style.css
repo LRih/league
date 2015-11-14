@@ -34,7 +34,7 @@ a:hover
 #navbar
 {
     font-weight: 400;
-    background-color: #1d1d1d;
+    background-color: rgba(29, 29, 29, 0.8);
     width: 100%;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     padding: 10px 0;
@@ -45,6 +45,7 @@ a:hover
 
 #nav-container
 {
+    background-color: #fff;
     max-width: 960px;
     margin: auto;
     padding: 0 10px;
@@ -81,9 +82,8 @@ a:hover
 {
     font-size: 16px;
     color: #fff;
-    margin-left: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 0 15px;
+    padding: 10px 0;
     display: inline-block;
 }
 .tab:hover
@@ -98,7 +98,7 @@ a:hover
 
 #tabs-dropdown
 {
-    background-color: #1d1d1d;
+    background-color: rgba(29, 29, 29, 0.8);
     position: fixed;
     top: 63px;
     left: 0;
@@ -110,6 +110,11 @@ a:hover
     color: #fff;
     padding: 14px 30px;
     display: block;
+}
+
+.tab-divider
+{
+    border-left: 1px solid #777;
 }
 
 #slider
