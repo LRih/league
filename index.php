@@ -7,7 +7,7 @@
         <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <?php $GLOBALS['activeTab'] = 'Home'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Home'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>Home</div>
             <div class='text'>

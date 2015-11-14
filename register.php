@@ -7,7 +7,7 @@
         <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <?php $GLOBALS['activeTab'] = 'Register'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Register'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>Register</div>
             <form class="form-horizontal">

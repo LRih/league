@@ -8,7 +8,7 @@
         <script type='text/javascript' src='script/boosting.js'></script>
     </head>
     <body>
-        <?php $GLOBALS['activeTab'] = 'Boosting'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Boosting'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>Boosting</div>
             <div id='boosting-select-container'>

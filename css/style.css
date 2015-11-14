@@ -79,6 +79,12 @@ a:focus, a:hover
     float: right;
 }
 
+#tab-container .glyphicon-user
+{
+    color: #fff;
+    margin-left: 15px;
+}
+
 .tab
 {
     font-size: 16px;
@@ -208,4 +214,11 @@ footer
 .dropdown-menu
 {
     width: 100%;
+}
+
+/* ============================================================================ CONTACT */
+#login-container
+{
+    max-width: 400px;
+    margin: auto;
 }

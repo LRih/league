@@ -6,19 +6,38 @@
         </a>
         <div id='tab-container' class='no-mob'>
             <?php
-                $links = ['index', 'boosting', 'contact', '', 'register', 'login'];
-                $tabs = ['Home', 'Boosting', 'Contact', '<div>', 'Register', 'Log in'];
+                include_once('php/auth.php');
+
+                $account_link = 'account';
+                $account_tab = 'Account';
+                $username;
+
+                $links = ['index', 'boosting', 'contact', ''];
+                $tabs = ['Home', 'Boosting', 'Contact', '<div>'];
+
+                if (!isset($_SESSION['user_id']))
+                {
+                    array_push($links, 'register', 'login');
+                    array_push($tabs, 'register', 'login');
+                }
 
                 for ($i = 0; $i < count($tabs); $i++)
                 {
                     $link = $links[$i];
                     $tab = $tabs[$i];
-                    $active = ($GLOBALS['activeTab'] === $tab);
+                    $active = ($GLOBALS['active_tab'] === $tab ? 'active ' : '');
 
                     if ($tab === '<div>')
                         echo '<span class=\'tab-divider\'></span>';
                     else
-                        echo '<a class=\''.($active ? 'active ' : '').'tab\' href=\'' . $link . '.php\'>' . $tab . '</a>';
+                        echo '<a class=\'' . $active . 'tab\' href=\'' . $link . '.php\'>' . $tab . '</a>';
+                }
+
+                if (isset($_SESSION['user_id']))
+                {
+                    $username = get_username($_SESSION['user_id']);
+                    $active = ($GLOBALS['active_tab'] === $account_tab ? 'active ' : '');
+                    echo '<span class="glyphicon glyphicon-user"></span><a class=\'' . $active . 'tab\' href=\'' . $account_link . '.php\'>' . $username . '</a>';
                 }
             ?>
             <div id='slider'></div>
@@ -28,17 +47,20 @@
     <div class='mob'>
         <div id='tabs-dropdown'>
             <?php
-                $links = ['index', 'boosting', 'contact', '', 'register', 'login'];
-                $tabs = ['Home', 'Boosting', 'Contact', '<div>', 'Register', 'Log in'];
-
                 for ($i = 0; $i < count($tabs); $i++)
                 {
                     $link = $links[$i];
                     $tab = $tabs[$i];
-                    $active = ($GLOBALS['activeTab'] === $tab);
+                    $active = ($GLOBALS['active_tab'] === $tab ? 'active ' : '');
 
                     if ($tab !== '<div>')
                         echo '<a class=\''.($active ? 'active' : '').'\' href=\'' . $link . '.php\'>' . $tab . '</a>';
+                }
+
+                if (isset($_SESSION['user_id']))
+                {
+                    $active = ($GLOBALS['active_tab'] === $account_tab ? 'active ' : '');
+                    echo '<a class=\'' . $active . '\' href=\'' . $account_link . '.php\'><span class="glyphicon glyphicon-user"></span> ' . $username . '</a>';
                 }
             ?>
         </div>

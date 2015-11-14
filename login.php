@@ -1,5 +1,18 @@
 <?php error_reporting(0); session_start(); ?>
 
+<?php
+    include_once('php/auth.php');
+
+    $authd = false;
+    if ($_SERVER['REQUEST_METHOD'] === 'GET')
+        $authd = is_authd();
+    else if ($_SERVER['REQUEST_METHOD'] === 'POST')
+        $authd = authenticate($_POST['email'], $_POST['password']);
+
+    if ($authd)
+        header('Location: index.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,33 +20,34 @@
         <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <?php $GLOBALS['activeTab'] = 'Log in'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Log in'; include_once('php/nav.php') ?>
         <div id='content'>
-            <div class='heading'>Login</div>
-            <form class="form-horizontal" method='post'>
-                <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email:</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="email" name='email' placeholder='Email' required>
+            <div id='login-container'>
+                <div class='heading'>Login</div>
+                <?php
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$authd)
+                        include_once('php/login-failure.php');
+                ?>
+                <form class="form-horizontal" method='post'>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" name='email' placeholder='Email' required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-sm-3 control-label">Password:</label>
-                    <div class="col-sm-6">
-                        <input type="password" class="form-control" id="password" name='password' placeholder='Password' required>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="password" name='password' placeholder='Password' required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-6">
-                        <button type="submit" class="btn btn-default">Log in</button>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-default">Log in</button>
+                        </div>
                     </div>
-                </div>
-            </form>
-            <?php
-                include_once('php/auth.php');
-                if ($_SERVER['REQUEST_METHOD'] === 'POST' && is_valid($_POST['email'], $_POST['password']))
-                    header('Location: index.php');
-            ?>
+                </form>
+            </div>
         </div>
         <?php include_once('php/footer.php') ?>
     </body>
