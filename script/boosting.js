@@ -26,10 +26,10 @@ $(function()
             tierList.eq(i).find('a').html(division + ' ' + TIERS[i]);
 
         if (isMastersChallenger(division))
-            dropdown.css('display', 'none');
+            dropdown.css('visibility', 'hidden');
         else
         {
-            dropdown.css('display', 'block');
+            dropdown.css('visibility', 'visible');
             updateDropdownText(dropdown);
         }
     });
