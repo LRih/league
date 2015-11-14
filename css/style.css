@@ -92,9 +92,9 @@ a:focus, a:hover
     color: #fff;
 }
 
-.tab.active
+.tab.active, #tabs-dropdown > a.active
 {
-    color: #ACE;
+    color: #ace;
 }
 
 #tabs-dropdown

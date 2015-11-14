@@ -35,9 +35,10 @@
                 {
                     $link = $links[$i];
                     $tab = $tabs[$i];
+                    $active = ($GLOBALS['activeTab'] === $tab);
 
                     if ($tab !== '<div>')
-                        echo '<a href=\''.$link.'.php\'>'.$tab.'</a>';
+                        echo '<a class=\''.($active ? 'active' : '').'\' href=\''.$link.'.php\'>'.$tab.'</a>';
                 }
             ?>
         </div>
