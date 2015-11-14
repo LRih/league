@@ -15,8 +15,9 @@ a
 {
     text-decoration: none;
 }
-a:hover
+a:focus, a:hover
 {
+    outline: 0;
     text-decoration: none;
 }
 
@@ -86,7 +87,7 @@ a:hover
     padding: 10px 0;
     display: inline-block;
 }
-.tab:hover
+.tab:focus, .tab:hover
 {
     color: #fff;
 }
@@ -188,24 +189,18 @@ footer
 }
 
 /* ============================================================================ BOOSTING */
-.rank-select-container
+#boosting-select-container
 {
-    background-color: #CFC;
     text-align: center;
-    vertical-align: bottom;
-    width: 300px;
-    height: 400px;
-    padding: 10px;
-    display: inline-block;
 }
 
-.region-select-container
+.rank-select-container, .region-select-container
 {
     background-color: #CFC;
     text-align: center;
-    vertical-align: bottom;
+    vertical-align: top;
     width: 300px;
-    height: 400px;
+    margin-top: 10px;
     padding: 10px;
     display: inline-block;
 }

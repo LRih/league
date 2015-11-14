@@ -2,49 +2,10 @@
 <html>
     <head>
         <title>League King</title>
-        <meta charset='UTF-8'/>
-        <meta name='viewport' content='width=device-width' />
-        
-        <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
-        <script type='text/javascript' src='script/script.js'></script>
-        <script type='text/javascript' src='script/tabs-dropdown.js'></script>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-        
-        <link rel='stylesheet' type='text/css' href='css/style.css' />
-        <link rel='stylesheet' media='screen and (max-width: 680px)' type='text/css' href='css/style-mobile.css' />
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' />
+        <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <nav id='navbar'>
-            <div id='nav-container'>
-                <a id='nav-title-container' href='index.html'>
-                    <img id='nav-logo' src='images/logo.png'>
-                    <span id='nav-title'>League King</span>
-                </a>
-                <div id='tab-container' class='no-mob'>
-                    <a class='active tab' href='index.html'>Home</a>
-                    <a class='tab' href='boosting.html'>Boosting</a>
-                    <a class='tab' href='contact.html'>Contact</a>
-                    <span class='tab-divider'>
-                    <a class='tab' href='#'>Register</a>
-                    <a class='tab' href='#'>Log in</a>
-                    <div id='slider'></div>
-                </div>
-                <img id='nav-menu' class='mob' src='images/menu.png' alt='Menu'>
-            </div>
-            <div class='mob'>
-                <div id='tabs-dropdown'>
-                    <a href='index.html'>Home</a>
-                    <a href='boosting.html'>Boosting</a>
-                    <a href='contact.html'>Contact</a>
-                    <a href='#'>Register</a>
-                    <a href='#'>Log in</a>
-                </div>
-            </div>
-        </nav>
+        <?php $GLOBALS['activeTab'] = 'Home'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>Home</div>
             <div class='text'>
@@ -83,8 +44,6 @@
                 Sed ornare dui sed mi ultricies, ac imperdiet nisi elementum. Donec placerat lobortis eros nec ullamcorper. In tristique mattis efficitur. Quisque viverra, ligula nec dapibus sodales, magna leo feugiat risus, et ultrices urna massa at felis. Proin molestie purus eu arcu sagittis, et dapibus orci fringilla. Curabitur dapibus rutrum ante, at egestas magna luctus at. Aenean euismod aliquet ipsum porta posuere. Nulla ut sollicitudin nunc. Vestibulum faucibus ante eu tempus congue. Curabitur eu tristique odio. Vestibulum vitae neque ultrices, interdum diam quis, malesuada lectus. Etiam et quam ac lorem pulvinar suscipit eu ac dui. 
             </div>
         </div>
-        <footer>
-            Copyright &copy; &lt;year&gt;
-        </footer>
+        <?php include_once('php/footer.php') ?>
     </body>
 </html>
