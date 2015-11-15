@@ -31,7 +31,7 @@
                             <input type="text" class="form-control" id="email" name='email' placeholder='Email' maxlength='50' required>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group has-feedback">
                         <label for="password" class="col-sm-3 control-label">Password:</label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" id="password" name='password' placeholder='Password' maxlength='30' required>

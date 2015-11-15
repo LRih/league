@@ -10,10 +10,9 @@
     <body>
         <?php $GLOBALS['active_tab'] = 'Boosting'; include_once('php/nav.php') ?>
         <div id='content'>
-            <div class='heading'>Boosting</div>
             <div id='boosting-select-container'>
                 <div id='current-rank' class='rank-select-container'>
-                    <div class='heading'>Current Rank</div>
+                    <div class='rank-select-heading'>Current Rank</div>
                     <img class='division-img' src="images/div_bronze.png">
                     <div class="division-select margin-top dropdown">
                         <button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">
@@ -44,7 +43,7 @@
                     </div>
                 </div>
                 <div id='desired-rank' class='rank-select-container'>
-                    <div class='heading'>Desired Rank</div>
+                    <div class='rank-select-heading'>Desired Rank</div>
                     <img class='division-img' src="images/div_bronze.png">
                     <div class="division-select margin-top dropdown">
                         <button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">
@@ -76,7 +75,7 @@
                     </div>
                 </div>
                 <div class='region-select-container'>
-                    <div class='heading'>Select your region</div>
+                    <div class='rank-select-heading'>Region</div>
                     <div class="region-select margin-top dropdown">
                         <button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">
                             Region

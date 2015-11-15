@@ -195,6 +195,14 @@ footer
 }
 
 /* ============================================================================ BOOSTING */
+.rank-select-heading
+{
+    font-size: 32px;
+    font-weight: 600;
+    color: #2B6B84;
+    margin-bottom: 20px;
+}
+
 #boosting-select-container
 {
     text-align: center;
@@ -202,7 +210,6 @@ footer
 
 .rank-select-container, .region-select-container
 {
-    background-color: #CFC;
     text-align: center;
     vertical-align: top;
     width: 300px;

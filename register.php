@@ -39,10 +39,12 @@
                         <input type="password" class="form-control" id="password" placeholder='Password' maxlength='16' pattern='[A-Za-z0-9]{8,16}' title="Password must be between 8 to 16 characters and consist of A-Z a-z 0-9">
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group has-error has-feedback">
                     <label for="retype-password" class="col-sm-3 control-label">Retype password:</label>
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="retype-password" placeholder='Retype password' maxlength='16'>
+                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                        <span class="help-block">Test error.</span>
                     </div>
                 </div>
                 <div class="form-group">
