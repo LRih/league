@@ -56,10 +56,7 @@
                     $active = ($GLOBALS['active_tab'] === $tab ? 'active ' : '');
 
                     if ($tab !== '<div>')
-                    {
-                        $user_icon = ($tab === 'Account' && isset($_SESSION['user_id']) ? '<span class="glyphicon glyphicon-user"></span> ' : '');
-                        echo '<a class=\''.($active ? 'active' : '').'\' href=\'' . $link . '.php\'>' . $user_icon . $tab . '</a>';
-                    }
+                        echo '<a class=\''.($active ? 'active' : '').'\' href=\'' . $link . '.php\'>' . $tab . '</a>';
                 }
             ?>
         </div>
