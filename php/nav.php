@@ -1,3 +1,20 @@
+<?php
+    include_once('php/auth.php');
+
+    $account_link = 'account'; $account_tab = 'Account';
+    $logout_link = 'logout'; $logout_tab = 'Logout';
+    $username;
+
+    $links = ['index', 'boosting', 'contact', ''];
+    $tabs = ['Home', 'Boosting', 'Contact', '<div>'];
+
+    if (!isset($_SESSION['user_id']))
+    {
+        array_push($links, 'register', 'login');
+        array_push($tabs, 'Register', 'Login');
+    }
+?>
+
 <nav id='navbar'>
     <div id='nav-container'>
         <a id='nav-title-container' href='index.php'>
@@ -6,21 +23,6 @@
         </a>
         <div id='tab-container' class='no-mob'>
             <?php
-                include_once('php/auth.php');
-
-                $account_link = 'account';
-                $account_tab = 'Account';
-                $username;
-
-                $links = ['index', 'boosting', 'contact', ''];
-                $tabs = ['Home', 'Boosting', 'Contact', '<div>'];
-
-                if (!isset($_SESSION['user_id']))
-                {
-                    array_push($links, 'register', 'login');
-                    array_push($tabs, 'Register', 'Login');
-                }
-
                 for ($i = 0; $i < count($tabs); $i++)
                 {
                     $link = $links[$i];
@@ -38,6 +40,7 @@
                     $username = get_username($_SESSION['user_id']);
                     $active = ($GLOBALS['active_tab'] === $account_tab ? 'active ' : '');
                     echo '<span class="glyphicon glyphicon-user"></span><a class=\'' . $active . 'tab\' href=\'' . $account_link . '.php\'>' . $username . '</a>';
+                    echo '<a class=\'tab\' href=\'' . $logout_link . '.php\'>' . $logout_tab . '</a>';
                 }
             ?>
             <div id='slider'></div>
@@ -61,6 +64,7 @@
                 {
                     $active = ($GLOBALS['active_tab'] === $account_tab ? 'active ' : '');
                     echo '<a class=\'' . $active . '\' href=\'' . $account_link . '.php\'><span class="glyphicon glyphicon-user"></span> ' . $username . '</a>';
+                    echo '<a href=\'' . $logout_link . '.php\'>' . $logout_tab . '</a>';
                 }
             ?>
         </div>

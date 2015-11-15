@@ -1,5 +1,16 @@
 <?php error_reporting(0); session_start(); ?>
 
+<?php
+    include_once('php/auth.php');
+
+    $authd = false;
+    if ($_SERVER['REQUEST_METHOD'] === 'GET')
+        $authd = is_authd();
+
+    if ($authd)
+        header('Location: index.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

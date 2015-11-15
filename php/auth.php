@@ -21,7 +21,7 @@ function authenticate($email, $password)
 
     if ($statement = $connection->prepare("SELECT id, password_hash FROM users WHERE email=?"))
     {
-        if ($statement->bind_param("s", $email) && $statement->execute())
+        if ($statement->bind_param("s", strtolower($email)) && $statement->execute())
         {
             $statement->bind_result($id, $password_hash);
 
@@ -36,6 +36,11 @@ function authenticate($email, $password)
     $connection->close();
 
     return $valid;
+}
+
+function logout()
+{
+    unset($_SESSION['user_id']);
 }
 
 function is_authd()
