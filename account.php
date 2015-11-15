@@ -20,7 +20,7 @@
             <div class='text'>
                 <?php
                     include_once('php/auth.php');
-                    echo get_username();
+                    echo get_name();
                 ?>
             </div>
         </div>

@@ -11,6 +11,7 @@
         <?php $GLOBALS['active_tab'] = 'Boosting'; include_once('php/nav.php') ?>
         <div id='content'>
             <div id='boosting-select-container'>
+
                 <div id='current-rank' class='rank-select-container'>
                     <div class='rank-select-heading'>Current Rank</div>
                     <img class='division-img' src="images/div_bronze.png">
@@ -42,6 +43,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div id='desired-rank' class='rank-select-container'>
                     <div class='rank-select-heading'>Desired Rank</div>
                     <img class='division-img' src="images/div_bronze.png">
@@ -74,6 +76,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class='region-select-container'>
                     <div class='rank-select-heading'>Region</div>
                     <div class="region-select margin-top dropdown">
@@ -90,6 +93,7 @@
                     </div>
                     <button type="button" class="margin-top btn btn-primary btn-lg btn-block">Add to cart</button>
                 </div>
+                
             </div>
         </div>
         <?php include_once('php/footer.php') ?>
