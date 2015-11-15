@@ -14,8 +14,6 @@ function authenticate($email, $password)
     if (strlen($email) > MAX_EMAIL_LENGTH || strlen($password) > MAX_PASSWORD_LENGTH)
         return false;
 
-    echo "past check";
-
     $connection = get_connection();
 
     if ($connection->connect_error)
