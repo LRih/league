@@ -3,11 +3,7 @@
 <?php
     include_once('php/auth.php');
 
-    $authd = false;
-    if ($_SERVER['REQUEST_METHOD'] === 'GET')
-        $authd = is_authd();
-
-    if ($authd)
+    if (is_authd())
         header('Location: index.php');
 ?>
 

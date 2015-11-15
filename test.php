@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +8,9 @@
     </head>
     <body>
         <?php
+            include_once('php/auth.php');
+            echo "Logged in user: " . get_username() . "<br><br>";
+
             $connection = new mysqli('localhost', 'root', '', 'league');
 
             if ($connection->connect_error)

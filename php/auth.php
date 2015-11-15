@@ -43,20 +43,31 @@ function logout()
     unset($_SESSION['user_id']);
 }
 
+
 function is_authd()
 {
     return isset($_SESSION['user_id']);
 }
 
-function get_username($id)
+
+function get_user_id()
 {
-    $name = '<NULL>';
+    return $_SESSION['user_id'];
+}
+
+function get_username()
+{
+    $name = '[NULL]';
+
+    if (!is_authd())
+        return $name;
+
     $connection = get_connection();
 
     if ($connection->connect_error)
-        return false;
+        return $name;
 
-    $result = $connection->query("SELECT username FROM users WHERE id=" . $id);
+    $result = $connection->query("SELECT username FROM users WHERE id=" . get_user_id());
 
     if ($row = $result->fetch_assoc())
         $name = $row['username'];
