@@ -18,7 +18,7 @@
                 if (!isset($_SESSION['user_id']))
                 {
                     array_push($links, 'register', 'login');
-                    array_push($tabs, 'register', 'login');
+                    array_push($tabs, 'Register', 'Login');
                 }
 
                 for ($i = 0; $i < count($tabs); $i++)

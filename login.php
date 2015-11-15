@@ -20,7 +20,7 @@
         <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <?php $GLOBALS['active_tab'] = 'Log in'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Login'; include_once('php/nav.php') ?>
         <div id='content'>
             <div id='login-container'>
                 <div class='heading'>Login</div>
