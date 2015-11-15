@@ -1,5 +1,6 @@
 <meta charset='UTF-8' />
 <meta name='viewport' content='width=device-width' />
+<link rel='icon' href='images/icon.ico'/>
 
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
 <script type='text/javascript' src='script/slider.js'></script>
