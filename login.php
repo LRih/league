@@ -3,13 +3,9 @@
 <?php
     include_once('php/auth.php');
 
-    $authd = false;
-    if ($_SERVER['REQUEST_METHOD'] === 'GET')
-        $authd = is_authd();
-    else if ($_SERVER['REQUEST_METHOD'] === 'POST')
-        $authd = authenticate($_POST['email'], $_POST['password']);
-
-    if ($authd)
+    if (is_authd())
+        header('Location: index.php');
+    else if ($_SERVER['REQUEST_METHOD'] === 'POST' && authenticate($_POST['email'], $_POST['password']))
         header('Location: index.php');
 ?>
 
