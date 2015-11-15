@@ -1,11 +1,20 @@
 <?php
 
+define("MAX_EMAIL_LENGTH", 50);
+define("MAX_USERNAME_LENGTH", 16);
+define("MAX_PASSWORD_LENGTH", 16);
+
 function authenticate($email, $password)
 {
     $valid = false;
 
     if (!isset($email) || !isset($password))
         return false;
+
+    if (strlen($email) > MAX_EMAIL_LENGTH || strlen($password) > MAX_PASSWORD_LENGTH)
+        return false;
+
+    echo "past check";
 
     $connection = get_connection();
 

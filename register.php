@@ -14,13 +14,13 @@
                 <div class="form-group">
                     <label for="email" class="col-sm-3 control-label">Email:</label>
                     <div class="col-sm-6">
-                        <input type="email" class="form-control" id="email" placeholder='Email'>
+                        <input type="email" class="form-control" id="email" placeholder='Email' maxlength='50'>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="username" class="col-sm-3 control-label">Username:</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="username" placeholder='Username'>
+                        <input type="text" class="form-control" id="username" placeholder='Username' pattern='[A-Za-z0-9]{8,16}' title="Username must be between 8 to 16 characters and consist of A-Z a-z 0-9">
                     </div>
                 </div>
                 <div class="form-group">
@@ -29,13 +29,13 @@
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password:</label>
                     <div class="col-sm-6">
-                        <input type="password" class="form-control" id="password" placeholder='Password' pattern='[A-Za-z0-9]{8,16}' title="Password must be between 8 to 16 characters and consist of A-Z a-z 0-9">
+                        <input type="password" class="form-control" id="password" placeholder='Password' maxlength='16' pattern='[A-Za-z0-9]{8,16}' title="Password must be between 8 to 16 characters and consist of A-Z a-z 0-9">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="retype-password" class="col-sm-3 control-label">Retype password:</label>
                     <div class="col-sm-6">
-                        <input type="password" class="form-control" id="retype-password" placeholder='Retype password'>
+                        <input type="password" class="form-control" id="retype-password" placeholder='Retype password' maxlength='16'>
                     </div>
                 </div>
                 <div class="form-group">
