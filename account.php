@@ -17,11 +17,16 @@
         <?php $GLOBALS['active_tab'] = 'Account'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>Account</div>
-            <div class='text'>
-                <?php
-                    include_once('php/auth.php');
-                    echo get_username();
-                ?>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Username: <?php echo get_account()->username(); ?><br>
+                    Email: <?php echo get_account()->email(); ?>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a class="btn btn-default" href="change-pwd.php" role="button">Change password</a>
+                </div>
             </div>
         </div>
         <?php include_once('php/footer.php') ?>

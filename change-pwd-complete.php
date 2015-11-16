@@ -3,13 +3,15 @@
 <?php
     include_once('php/auth.php');
 
-    if (!isset($_SESSION['allow_reg_complete']))
+    if (!isset($_SESSION['allow_change_pwd_complete']))
         header('Location: index.php');
 
-    unset($_SESSION['allow_reg_complete']);
+    unset($_SESSION['allow_change_pwd_complete']);
 
-    if (is_authd() || !isset($_GET['username']))
+    if (!is_authd() || !isset($_GET['username']))
         header('Location: index.php');
+
+    logout();
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +22,14 @@
         <script type='text/javascript' src='script/register.js'></script>
     </head>
     <body>
-        <?php $GLOBALS['active_tab'] = 'Register'; include_once('php/nav.php') ?>
+        <?php $GLOBALS['active_tab'] = 'Login'; include_once('php/nav.php') ?>
         <div id='content'>
             <div id='login-container'>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <div class="panel-title">Registration successful</div>
+                        <div class="panel-title">Password change successful</div>
                     </div>
-                    <div class="panel-body">User "<?php echo htmlspecialchars($_GET['username']) ?>" has been registered.</div>
+                    <div class="panel-body">Password has been changed for user "<?php echo htmlspecialchars($_GET['username']) ?>". User has been logged out.</div>
                 </div>
             </div>
         </div>

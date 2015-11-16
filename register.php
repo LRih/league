@@ -10,7 +10,7 @@
         header('Location: index.php');
     else if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        $reg = new registration($_POST['username'], $_POST['email'], $_POST['password'], $_POST['retype-password']);
+        $reg = new Registration($_POST['username'], $_POST['email'], $_POST['password'], $_POST['retype-password']);
         if ($reg->try_register())
         {
             $_SESSION['allow_reg_complete'] = true;

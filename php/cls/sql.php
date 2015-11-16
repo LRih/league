@@ -1,6 +1,6 @@
 <?php
 
-class sql
+class SQL
 {
     public static function connection()
     {

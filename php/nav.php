@@ -6,7 +6,7 @@
     $links = ['index', 'boosting', 'contact', ''];
     $tabs = ['Home', 'Boosting', 'Contact', '<div>'];
 
-    if (isset($_SESSION['user_id']))
+    if (is_authd())
     {
         array_push($links, 'account', 'logout');
         array_push($tabs, 'Account', 'Logout');

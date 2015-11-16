@@ -36,7 +36,7 @@ include_once('php/cls/sql.php');
 
             function draw_header($str)
             {
-                echo "<br> " . $str . "<br>";
+                echo "<br><br> " . $str . "<br>";
                 for ($i = 0; $i < strlen($str) + 2; $i++)
                     echo "=";
                 echo "<br>";
