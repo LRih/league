@@ -1,4 +1,4 @@
-<?php error_reporting(0); session_start(); ?>
+<?php include_once('php/global.php') ?>
 
 <!DOCTYPE html>
 <html>

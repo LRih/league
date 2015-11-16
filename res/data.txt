@@ -1,0 +1,11 @@
+Data		Client					Server
+-----------------------------------------------
+username	[A-Za-z0-9]{6,16}		regex
+email		email type (50 char)	filter_var
+password	[A-Za-z0-9]{8,16}		regex
+
+=== Enforced locations ===
+Database
+php/cls/registration.php
+script/register.js
+register.php

@@ -1,4 +1,4 @@
-<?php error_reporting(0); session_start(); ?>
+<?php include_once('php/global.php') ?>
 
 <?php
     include_once('php/auth.php');
@@ -20,7 +20,7 @@
             <div class='text'>
                 <?php
                     include_once('php/auth.php');
-                    echo get_name();
+                    echo get_username();
                 ?>
             </div>
         </div>
