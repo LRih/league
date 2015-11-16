@@ -26,7 +26,6 @@
         <?php include_once('php/head.php') ?>
     </head>
     <body>
-        <?php $GLOBALS['active_tab'] = 'Register'; include_once('php/nav.php') ?>
         <div id='content'>
             <div class='heading'>No client-side input validation registration check</div>
             <form class="form-horizontal" onsubmit="return validateForm()" method='post'>
@@ -78,6 +77,5 @@
 
             </form>
         </div>
-        <?php include_once('php/footer.php') ?>
     </body>
 </html>

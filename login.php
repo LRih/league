@@ -21,7 +21,7 @@
             <div id='login-container'>
                 <div class='heading'>Login</div>
                 <?php
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$authd)
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST')
                         include_once('php/login-failure.php');
                 ?>
                 <form class="form-horizontal" method='post'>

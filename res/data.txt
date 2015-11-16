@@ -7,5 +7,4 @@ password	[A-Za-z0-9]{8,16}		regex
 === Enforced locations ===
 Database
 php/cls/registration.php
-script/register.js
 register.php
