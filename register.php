@@ -14,7 +14,7 @@
         if ($reg->try_register())
         {
             $_SESSION['allow_reg_complete'] = true;
-            header('Location: register-complete.php?username='. $_POST['username']);
+            header('Location: register-complete.php?username=' . $_POST['username']);
         }
     }
 ?>

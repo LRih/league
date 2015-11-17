@@ -14,8 +14,10 @@
         $pwd_change = new PasswordChange(get_account(), $_POST['cur-password'], $_POST['password'], $_POST['retype-password']);
         if ($pwd_change->try_change())
         {
+            $username = get_account()->username();
+            logout();
             $_SESSION['allow_change_pwd_complete'] = true;
-            header('Location: change-pwd-complete.php?username='. get_account()->username());
+            header('Location: change-pwd-complete.php?username=' . $username);
         }
     }
 ?>

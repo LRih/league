@@ -39,7 +39,8 @@ class PasswordChange
         if ($statement = $connection->prepare("UPDATE users SET password_hash=? WHERE id=?"))
         {
             $hash = password_hash($this->new_password, PASSWORD_DEFAULT);
-            if ($statement->bind_param("si", $hash, $this->account->id()) && $statement->execute())
+            $id = $this->account->id();
+            if ($statement->bind_param("si", $hash, $id) && $statement->execute())
                 $success = true;
         }
 
