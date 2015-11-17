@@ -15,7 +15,7 @@ include_once('php/cls/sql.php');
     <body>
         <?php
             draw_header("AUTH TEST");
-            echo "Logged in user: " . get_username() . "<br>";
+            echo "Logged in user: " . (is_authd() ? get_account()->username() : '[NULL]') . "<br>";
 
             draw_header("SQL TEST");
             $connection = sql::connection();

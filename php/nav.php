@@ -36,7 +36,7 @@
                         echo '<span class=\'tab-divider\'></span>';
                     else
                     {
-                        if ($tab === 'Account' && isset($_SESSION['user_id']))
+                        if ($tab === 'Account' && is_authd())
                             echo '<span class="glyphicon glyphicon-user"></span>';
                         echo '<a class=\'' . $active . 'tab\' href=\'' . $link . '.php\'>' . $tab . '</a>';
                     }
