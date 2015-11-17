@@ -4,9 +4,15 @@
     include_once('php/auth.php');
 
     if (is_authd())
+    {
         header('Location: index.php');
+        die();
+    }
     else if ($_SERVER['REQUEST_METHOD'] === 'POST' && authenticate($_POST['username'], $_POST['password']))
+    {
         header('Location: index.php');
+        die();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +43,13 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-default">Log in</button>
+                                <label class='checkbox-inline'><input type="checkbox">Remember me (NA)</label>
+                            <button type="submit" class="btn btn-default pull-right">Log in</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <a href='#'>Forgotten username or password? (NA)</a>
                         </div>
                     </div>
                 </form>

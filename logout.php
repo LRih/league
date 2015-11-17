@@ -5,5 +5,6 @@ include_once('php/auth.php');
 
 logout();
 header('Location: index.php');
+die();
 
 ?>

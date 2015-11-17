@@ -4,12 +4,18 @@
     include_once('php/auth.php');
 
     if (!isset($_SESSION['allow_reg_complete']))
+    {
         header('Location: index.php');
+        die();
+    }
 
     unset($_SESSION['allow_reg_complete']);
 
     if (is_authd() || !isset($_GET['username']))
+    {
         header('Location: index.php');
+        die();
+    }
 ?>
 
 <!DOCTYPE html>

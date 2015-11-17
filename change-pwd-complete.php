@@ -2,12 +2,18 @@
 
 <?php
     if (!isset($_SESSION['allow_change_pwd_complete']))
+    {
         header('Location: index.php');
+        die();
+    }
 
     unset($_SESSION['allow_change_pwd_complete']);
 
     if (!isset($_GET['username']))
+    {
         header('Location: index.php');
+        die();
+    }
 ?>
 
 <!DOCTYPE html>

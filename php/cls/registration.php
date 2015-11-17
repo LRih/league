@@ -37,10 +37,11 @@ class Registration
             return false;
 
         $success = false;
-        if ($statement = $connection->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, lower(?), ?)"))
+        if ($statement = $connection->prepare("INSERT INTO users (username, email, password_hash, verification_code) VALUES (?, lower(?), ?, ?)"))
         {
             $hash = password_hash($this->password, PASSWORD_DEFAULT);
-            if ($statement->bind_param("sss", $this->username, $this->email, $hash) && $statement->execute())
+            $code = md5(rand(40000, 50000));
+            if ($statement->bind_param("ssss", $this->username, $this->email, $hash, $code) && $statement->execute())
                 $success = true;
         }
 

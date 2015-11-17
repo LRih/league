@@ -7,7 +7,10 @@
     $reg;
 
     if (is_authd())
+    {
         header('Location: index.php');
+        die();
+    }
     else if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $reg = new Registration($_POST['username'], $_POST['email'], $_POST['password'], $_POST['retype-password']);
@@ -15,6 +18,7 @@
         {
             $_SESSION['allow_reg_complete'] = true;
             header('Location: register-complete.php?username=' . $_POST['username']);
+            die();
         }
     }
 ?>

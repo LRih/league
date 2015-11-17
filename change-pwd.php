@@ -8,7 +8,10 @@
     $pwd_change;
 
     if (!is_authd())
+    {
         header('Location: index.php');
+        die();
+    }
     else if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $pwd_change = new PasswordChange(get_account(), $_POST['cur-password'], $_POST['password'], $_POST['retype-password']);
@@ -18,6 +21,7 @@
             logout();
             $_SESSION['allow_change_pwd_complete'] = true;
             header('Location: change-pwd-complete.php?username=' . $username);
+            die();
         }
     }
 ?>
