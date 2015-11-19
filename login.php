@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                                <label class='checkbox-inline'><input type="checkbox">Remember me (NA)</label>
+                            <label class='checkbox-inline'><input type="checkbox">Remember me (NA)</label>
                             <button type="submit" class="btn btn-default pull-right">Log in</button>
                         </div>
                     </div>
